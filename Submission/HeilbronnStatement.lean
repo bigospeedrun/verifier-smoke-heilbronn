@@ -22,7 +22,7 @@ def pointsInUnitSquare (P : Finset Point) : Prop := by
 def triangleAreasAtLeast (P : Finset Point) (a : ℝ) : Prop := by
   classical
   exact ∀ p, p ∈ P → ∀ q, q ∈ P → ∀ r, r ∈ P →
-    p ≠ q → p ≠ r → q ≠ r → a ≤ triangleArea p q r
+    p ≠ q → p ≠ r → a ≤ triangleArea p q r
 
 def hasTriangleAreaAtMost (P : Finset Point) (a : ℝ) : Prop := by
   classical
