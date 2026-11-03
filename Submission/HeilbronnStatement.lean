@@ -80,7 +80,7 @@ and, for every `n ≥ N`, an `n`-point set whose triangles all have area at leas
 The controller substitutes an exact nonnegative rational for `η`. Larger values
 are better. -/
 def Bound (η : ℚ) : Prop :=
-  ∃ c : ℝ, 0 < c ∧ ∃ N : ℕ, ∀ n : ℕ, N ≤ n →
+  ∃ c : ℝ, ∃ N : ℕ, ∀ n : ℕ, N ≤ n →
     ∃ P : Finset Point, P.card = n ∧ pointsInUnitSquare P ∧
       triangleAreasAtLeast P (c * Real.rpow (n : ℝ) (-2 + (η : ℝ)))
 
