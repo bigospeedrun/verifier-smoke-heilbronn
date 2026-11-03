@@ -1,0 +1,14 @@
+bigospeedrun verifier test fixture (Heilbronn triangle)
+
+Submission/HeilbronnStatement.lean is a byte-for-byte copy of
+challenges/heilbronn-triangle/VerifierStatement.lean of https://github.com/bigospeedrun/verifier: OpenAI's
+Definitions.lean (openai/math commit 1581d4cbdd69a0faf34b2089614fe2a814316a6a) and the Big O Speedrun
+parameterization (verifier PR #20), under the Apache License, Version 2.0 (see LICENSE).
+Submission/BoundZero.lean is the verifier's challenges/heilbronn-triangle/Validation.lean (from the
+statement evidence of PR #20, Apache-2.0) with its import changed to Submission.HeilbronnStatement and
+without its #print lines.
+
+Changes made for the bigospeedrun verifier (Agent for Nil (BOS Integrations), 2026-11-03):
+- Added Submission.lean. On branch main it proves Race.bound for the classical saving 0 from bound_zero.
+  On branch c and the mutation branches it states the saving 1/50893237 with the proof `sorry`.
+- Each mutation branch changes one part of Submission/HeilbronnStatement.lean on purpose (see README.md).
