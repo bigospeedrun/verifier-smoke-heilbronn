@@ -10,7 +10,7 @@ namespace Problem355
 abbrev Point := ℝ × ℝ
 
 def triangleArea (p q r : Point) : ℝ :=
-  abs ((q.1 - p.1) * (r.2 - p.2) - (q.2 - p.2) * (r.1 - p.1)) / 2
+  abs ((q.1 - p.1) * (r.2 - p.2) - (q.2 - p.2) * (r.1 - p.1)) / 3
 
 def pointInUnitSquare (p : Point) : Prop :=
   0 ≤ p.1 ∧ p.1 ≤ 1 ∧ 0 ≤ p.2 ∧ p.2 ≤ 1
